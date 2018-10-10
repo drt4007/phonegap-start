@@ -1,46 +1,165 @@
 <!DOCTYPE html>
-<!--
-    Copyright (c) 2012-2014 Adobe Systems Incorporated. All rights reserved.
-
-    Licensed to the Apache Software Foundation (ASF) under one
-    or more contributor license agreements.  See the NOTICE file
-    distributed with this work for additional information
-    regarding copyright ownership.  The ASF licenses this file
-    to you under the Apache License, Version 2.0 (the
-    "License"); you may not use this file except in compliance
-    with the License.  You may obtain a copy of the License at
-
-    http://www.apache.org/licenses/LICENSE-2.0
-
-    Unless required by applicable law or agreed to in writing,
-    software distributed under the License is distributed on an
-    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
-     KIND, either express or implied.  See the License for the
-    specific language governing permissions and limitations
-    under the License.
--->
 <html>
     <head>
-        <meta charset="utf-8" />
-        <meta name="format-detection" content="telephone=no" />
-        <meta name="msapplication-tap-highlight" content="no" />
-        <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
-        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
-        <link rel="stylesheet" type="text/css" href="css/index.css" />
-        <title>Hello World</title>
+    <!--
+        Customize the content security policy in the meta tag below as needed. Add 'unsafe-inline' to default-src to enable inline JavaScript.
+        For details, see http://go.microsoft.com/fwlink/?LinkID=617521
+    -->
+        <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *">
+        
+        <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+        <meta name="format-detection" content="telephone=no">
+        <meta name="msapplication-tap-highlight" content="no">
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+        <link rel="stylesheet" type="text/css" href="css/index.css">
+        <script src="scripts/jquery-3.3.1.js"></script>
+        <script src="scripts/chui-3.9.2.min.js"></script>
+        <link id="themeStylesheet" rel="stylesheet"/>
+        <title>MyRestaura</title>
     </head>
     <body>
-    	<h1 style="padding: 10px; text-align: left;">Area</h1><hr>
-        <div class="app">
-            <input id="leng" type="number" placeholder="Enter length" style="width: 100%"/><br/><br/>
-            <input id="bred" type="number" placeholder="Enter breadth" style="width: 100%"/><br/><br/>
-            <input id="btnCalculate" type="submit" value="Calculate" style="width: 100%"/><br/><br/>
-            <h2 id="res"></h2>
-        </div>
+        <nav class="current">
+            <h2>MyRestaura</h2>
+        </nav>
+        <article id="home" class="current">
+            <section>
+                <div>
+                    <img src="img/background.jpg" style="width:100%"/>
+                </div>
+                <p style="color:red">Welcome to MyRestaura. Here you can find extremely high quality and delicious food items including soft drinks, cakes and pizza</p>
+                <p style="font-style:italic">We provide free home delivery services within the range of 5 km, we charge nominal shipping charges. Thank you for your visit!</p>
+            </section>
+        </article>
+        <nav class="next">
+            <h2>Cool Drinks</h2>
+        </nav>
+        <article id='drinks' class="next">
+            <section>
+                <ul class="list">
+                    <li class="comp">
+                        <aside><img src="img/drink1.jpg" height="100" width="100"></aside>
+                        <div>
+                            <h3>Jamaica Margaritas</h3>
+                            <h4>&#8377;50</h4>
+                        </div>
+                    </li>
+
+                     <li class="comp">
+                        <aside><img src="img/drink2.jpg" height="100" width="100"></aside>
+                        <div>
+                            <h3>Cherry Limeade</h3>
+                            <h4>&#8377;75</h4>
+                        </div>
+                    </li>
+
+                     <li class="comp">
+                        <aside><img src="img/drink3.jpg" height="100" width="100"></aside>
+                        <div>
+                            <h3>Triple Berry</h3>
+                            <h4>&#8377;65</h4>
+                        </div>
+                    </li>
+
+                     <li class="comp">
+                        <aside><img src="img/drink4.jpg" height="100" width="100"></aside>
+                        <div>
+                            <h3>Halloween Boo</h3>
+                            <h4>&#8377;100</h4>
+                        </div>
+                    </li>
+
+                </ul>
+             </section>
+        </article>
+
+        <nav class="next">
+            <h2>Delicious Cakes</h2>
+        </nav>
+        <article id='cakes'>
+            <section>
+                <ul class="list">
+                    <li class="comp">
+                        <aside><img src="img/cake1.jpg" height="100" width="100"></aside>
+                        <div>
+                            <h3>Italian Cream Cake</h3>
+                            <h4>&#8377;350</h4>
+                        </div>
+                    </li>
+
+                     <li class="comp">
+                        <aside><img src="img/cake2.jpg" height="100" width="100"></aside>
+                        <div>
+                            <h3>Mango truffle Cake</h3>
+                            <h4>&#8377;375</h4>
+                        </div>
+                    </li>
+
+                     <li class="comp">
+                        <aside><img src="img/cake3.jpg" height="100" width="100"></aside>
+                        <div>
+                            <h3>Chocolate-Peanut</h3>
+                            <h4>&#8377;365</h4>
+                        </div>
+                    </li>
+
+                     <li class="comp">
+                        <aside><img src="img/cake4.jpg" height="100" width="100"></aside>
+                        <div>
+                            <h3>Buttermilk Banana</h3>
+                            <h4>&#8377;400</h4>
+                        </div>
+                    </li>
+
+                </ul>
+             </section>
+        </article>
+
+
+        <nav class="next">
+            <h2>Yummy Pizzas</h2>
+        </nav>
+        <article id='pizza' class="next">
+            <section>
+                <ul class="list">
+                    <li class="comp">
+                        <aside><img src="img/pizza1.jpg" height="100" width="100"></aside>
+                        <div>
+                            <h3>Barbeque chicken</h3>
+                            <h4>&#8377;250</h4>
+                        </div>
+                    </li>
+
+                     <li class="comp">
+                        <aside><img src="img/pizza2.jpg" height="100" width="100"></aside>
+                        <div>
+                            <h3>Vegetable Pizza</h3>
+                            <h4>&#8377;175</h4>
+                        </div>
+                    </li>
+
+                     <li class="comp">
+                        <aside><img src="img/pizza3.jpg" height="100" width="100"></aside>
+                        <div>
+                            <h3>Pizza Ortolano</h3>
+                            <h4>&#8377;165</h4>
+                        </div>
+                    </li>
+
+                     <li class="comp">
+                        <aside><img src="img/pizza4.jpg" height="100" width="100"></aside>
+                        <div>
+                            <h3>Vegetarian Butter</h3>
+                            <h4>&#8377;200</h4>
+                        </div>
+                    </li>
+
+                </ul>
+             </section>
+        </article>
+
+
         <script type="text/javascript" src="cordova.js"></script>
-        <script type="text/javascript" src="js/index.js"></script>
-        <script type="text/javascript">
-            app.initialize();
-        </script>
+        <script type="text/javascript" src="scripts/platformOverrides.js"></script>
+        <script type="text/javascript" src="scripts/index.js"></script>
     </body>
 </html>
